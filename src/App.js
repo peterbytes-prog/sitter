@@ -1,5 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink
+} from 'react-router-dom';
+
+import Home from './Home';
+import Contact from './Contact';
+import Pet from './Pet';
+import House from './House';
 
 function App() {
   return (
@@ -8,10 +19,6 @@ function App() {
         <img src="logostellar.jpg" alt="Logo image of a house enclosing the letter S." class="logo center" />
         <h1>Stellar Sitting Services   </h1>
       </header>
-
-      <p>Looking for a pet and/or house sitter? We have you covered!</p>
-      <p><img src="doghouse.jpg" alt="Photo of a dog next to a large doghouse." class="round right" ></img> </p>
-      <p>Our company has been open and providing excellent services for over a dozen years. Our sitters are thoughtful, respectful, and well trained in home and pet care.</p>
       <nav>
         <ul>
           <li> Home  </li>
