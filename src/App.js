@@ -19,14 +19,22 @@ function App() {
         <img src="logostellar.jpg" alt="Logo image of a house enclosing the letter S." class="logo center" />
         <h1>Stellar Sitting Services   </h1>
       </header>
-      <nav>
-        <ul>
-          <li> Home  </li>
-          <li> <a href="stellarhouse.html">House Sitting</a> </li>
-          <li> <a href="stellarpet.html">Pet Sitting</a> </li>
-          <li> <a href="contact.html">Contact Us</a> </li>
-        </ul>
-      </nav>
+      <Router>
+        <nav>
+          <ul>
+            <li> <NavLink to='/'>Home</NavLink> </li>
+            <li> <NavLink to='/house'>House Sitting</NavLink> </li>
+            <li> <NavLink to='/pet'>Pet Sitting</NavLink> </li>
+            <li> <NavLink to='/contact'>Contact Us</NavLink> </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path='/house' element={<House />} />
+          <Route path='/pet' element={<Pet />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </Router>
       <h2>About Stellar Sitting Services</h2>
       <p>
         At Stellar, we take pride in our exceptional customer service. We began our business with one employee - Janie Stellar, owner and founder. Janie's reputation for trustworthy and caring service grew over the years, as did the company. Stellar now employs over 300 sitters.
